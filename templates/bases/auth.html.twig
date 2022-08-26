@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}Form App{% endblock %}</title>
+        <title>{% block title %}kscode form app{% endblock %}</title>
 
         {% block stylesheets %}
             <link href="{{ asset('css/animation.css') }}" rel="stylesheet"/>
@@ -15,6 +15,17 @@
 
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class='auth flex'>
+            <div class='auth_box flex'>
+                <div class='auth_box_element flex'>
+                    <div class='logo flex'>
+                        <img src='{{ asset('img/logo_white.png') }}' alt='kscode white logo'>
+                    </div>
+                </div>
+                <div class='auth_box_element flex'>
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+        </div>
     </body>
 </html>
