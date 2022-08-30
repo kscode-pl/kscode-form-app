@@ -20,7 +20,6 @@ class RegistrationFormType extends AbstractType
         $builder
             ->add('username', TextType::class, [
                 'mapped' => false,
-                'label' => false,
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Please enter a password',
@@ -37,7 +36,6 @@ class RegistrationFormType extends AbstractType
             ])
             ->add('plainPassword', PasswordType::class, [
                 'mapped' => false,
-                'label' => false,
                 'attr' => ['autocomplete' => 'new-password'],
                 'constraints' => [
                     new NotBlank([
